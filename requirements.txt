@@ -2,3 +2,5 @@ requests
 lxml
 pandas
 matplotlib
+fastapi
+uvicorn

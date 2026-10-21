@@ -71,7 +71,7 @@ def plot_tags(axes3,data):
     x_tags=list(tags_count.keys())
     y_tags=list(tags_count.values())
     axes3.bar(x_tags,y_tags,color='green',width=0.6)
-    axes3.set_title('不同电影标签数量占比饼状图',fontsize=18)
+    axes3.set_title('不同电影标签数量柱状图',fontsize=18)
     axes3.set_xlabel('标签',fontsize=12)
     axes3.set_ylabel('数量',fontsize=12)
     axes3.grid(linestyle='--',alpha=0.5)

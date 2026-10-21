@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>电影智能问答助手</title></head>
+<body>
+<h2>电影智能问答助手</h2>
+<input id="q" style="width:400px" placeholder="评分最高的有哪些？">
+<button onclick="ask()">提问</button>
+<div id="out" style="white-space:pre-wrap;margin-top:20px"></div>
+<script>
+async function ask(){
+    const q=document.getElementById("q").value
+    document.getElementById("out").innerText="思考中..."
+    const r=await fetch("/ask",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({question:q})})
+    const d=await r.json()
+    document.getElementById("out").innerText=d.answer
+}
+</script>
+</body>
+</html>
